@@ -1,0 +1,22 @@
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="username"
+  (input)="OnUpdateUsername()"
+>
+<hr>
+<p> {{username}} </p>
+<hr>
+<button
+  class="btn btn-primary" 
+  [disabled]="username === ''" 
+  (click)="onResetUsername()"
+>
+  Reset User
+</button>
+
+<!-- In line 13 we also could write: (click)="username = ''" -->
+
+<!-- If the value of username is not empty, === will return false
+The identity (===) operator behaves identically to the equality (==) 
+operator except no type conversion is done, and the types must be the same to be considered equal. -->
