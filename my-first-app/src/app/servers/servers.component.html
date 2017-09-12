@@ -2,14 +2,8 @@
 <input
     type = "text"
     class = "form-control"
-    (input) = "onUpdateServerName($event)"     
+    [(ngModel)] = "severName"     
 >
-<input
-type = "text"
-class = "form-control"
-[(ngModel)] = "severName"     
->
-<p> {{severName}} </p>
 <hr>
 <button 
     class = "btn btn-primary" 
