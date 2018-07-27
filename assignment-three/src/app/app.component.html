@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3> Assignment Three </h3>
+            <hr>
+            <button class="btn btn-primary"
+              (click) = "onToggleDetails()"
+            >
+              Toggle Details
+            </button>
+            <hr>
+            <p *ngIf="buttonClicked">Secret Password = tuna</p>
+            <hr>
+            <div *ngFor="let click of logs; let i = index">
+              <p [ngClass]="{lobo: i >= 4}"
+              >
+                {{click}}
+              </p>
+            </div> 
+        </div>
+    </div>
+</div>

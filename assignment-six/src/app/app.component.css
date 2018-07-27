@@ -1,0 +1,11 @@
+.container {
+    margin-top: 30px;
+}
+  
+/* ng-touched indica que el css se va a plicar a los input que el usuario haya tocado */
+/* Esto permite que en el momento 0 (cuando se carga el form), no aparezcan los bordes rojos.*/
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+  
+  

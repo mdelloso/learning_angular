@@ -1,1 +1,4 @@
-<p> Server ID {{ serverId }} is {{ getServerStatus() }} </p>
+<p [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: serverStatus === 'online'}"> <!-- Si la propiedad tiene guines debe ponerse entre comillas simples-->
+    Server ID {{ serverId }} is {{ getServerStatus() }} 
+</p>

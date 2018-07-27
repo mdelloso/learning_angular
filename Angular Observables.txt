@@ -1,0 +1,2 @@
+Para usar observables de la manera antigua (antes de Angular 6):
+npm install --save rxjs-compat

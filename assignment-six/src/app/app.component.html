@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <h3> Assignment Six </h3>
+      <hr>
+      <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+        <div class="form-group">
+          <label for="email">Mail</label>
+          <input type="email" id="email" class="form-control" name="email" ngModel required email #email="ngModel">
+          <span class="help-block" *ngIf="email.invalid && email.touched">Please enter a valid email!</span>
+        </div>
+        <div class="form-group">
+          <label for="subscription">Choose a Subscription</label>
+          <select name="subscription" id="subscription" class="form-control" [ngModel]="subscriptions[0]">
+            <option *ngFor="let subscription of subscriptions" [value]="subscription">{{ subscription }}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" name="password" ngModel required #password="ngModel">
+          <span class="help-block" *ngIf="password.invalid && password.touched">Please enter a password!</span>
+          <!-- ngModel es la directiva que le dice a Angular que este input es un control.  -->
+        </div>
+        <span class="help-block" *ngIf="myForm.invalid && myForm.touched">Please fill all fields!</span>
+        <button class="btn btn-primary" type="submit" [disabled]="myForm.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+  <hr>
+  <div class="row" *ngIf="submitted">
+    <div class="col-xs-12">
+      <h3>Your Data</h3>
+      <p>Mail: {{ formData.email }}</p>
+      <p>Subscription: {{ formData.subscription }}</p>
+      <p>Password: {{ formData.password }}</p>
+    </div>
+  </div>
+</div>

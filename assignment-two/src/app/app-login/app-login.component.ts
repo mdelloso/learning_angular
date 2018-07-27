@@ -5,14 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app-login.component.html',
   styleUrls: ['./app-login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  username: String = ''; 
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  username: String = '';
+  balnkUserName: String = '';
 
   onResetUsername() {
     this.username = '';

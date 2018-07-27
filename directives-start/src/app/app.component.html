@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
+      <br>
+      <br>
+      <ul class="list-group">
+        <div>
+          <li class="list-group-item" 
+           *ngFor="let oddNumber of oddNumbers"
+           [ngClass]="{odd: true}"
+           [ngStyle]="{backgroundColor: oddNumber % 2 !== 0 ? 'yellow' : 'transparent'}"
+          >
+            {{ oddNumber }}
+          </li>
+        </div>
+        <div *appUnless="onlyOdd">
+          <li class="list-group-item" 
+          *ngFor="let evenNumber of evenNumbers"
+          [ngClass]="{even: true}"
+          >
+            {{ evenNumber }}
+          </li>
+        </div>
+      </ul>
+      <p appBasicHighlight>Style me with basic directive!</p>
+      <!-- Si lo que le pasas a la propiedad es un string, se puede hacer un shortcut -->
+      <!-- Se le puede sacar los corchetes a la propiedad y sacarle las comillas simples al string -->
+      <!-- Siempre las dos juntas, no puede ser una sí y la otra no -->
+      <p appBetterHighlight [defaultColor]="'yellow'" highlightColor="red">Style me with a better directive!</p>
+      <p appBetterHighlight>Style me with a better cool directive!</p>
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="5">Valie is 5</p>
+        <p *ngSwitchCase="10">Valie is 10</p>
+        <p *ngSwitchCase="100">Valie is 100</p>
+        <p *ngSwitchDefault>Valie is Default</p>
+      </div>
+      <ng-template [ngIf]="onlyOdd">
+        <p>Only odd</p>
+      </ng-template>
+    </div>
+  </div>
+</div>
