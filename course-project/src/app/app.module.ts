@@ -1,7 +1,7 @@
 import { RecipeService } from './recipes/services/recipe.service';
 import { AppRoutingModule } from './app-routing.module';
 import { ShoppingListService } from './shopping-list/services/shopping-list.service';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -38,8 +38,12 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
+  // Si alguno de los servicios se declarasen locales a sus respectivos módulos, se destruirían cuando se pase a otro modulo.
+  // Por ejemplo, si el RecipeService se declarara local al recipe-module, cuando se navegue a la shoppinglist, el servicio se destruirá
+  // y, al volver al recipe module, empezará de 0. Esto provoca que todos los cambios realizados hasta el momento se pierdan.
   providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent]
 })
