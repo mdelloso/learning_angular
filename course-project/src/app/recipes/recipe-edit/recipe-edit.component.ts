@@ -42,7 +42,7 @@ export class RecipeEditComponent implements OnInit {
       this.recipeForm.value['imagePath'],
       this.recipeForm.value['ingredients']
     );
-     */
+    */
     // Si el formato y los nombres del formulario coinciden con los del modelo, es posible pasar directamente el valor del formulario.
     if (this.editMode) {
       this.recipeService.updateRecipe(this.recipeForm.value, this.recipeId);
