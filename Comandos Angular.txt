@@ -2,3 +2,7 @@ npm install --save bootstrap@3
 
 npm install --save rxjs-compat
 
+npm install --save firebase (instala el paquete con las librerías de Firebase, permite la autentificación con sus métodos propios entre otros)
+Para utilizar firebase hay que importarla en el app.component y copiar la apiKey y authDomain en el método initializeApp
+
+npm install --save-dev @angular/cli@latest (actualizar)

@@ -7,6 +7,8 @@ import { NgModule } from '@angular/core';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import {SignupComponent} from './auth/signup/signup.component';
+import {SigninComponent} from './auth/signin/signin.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
@@ -21,6 +23,8 @@ const appRoutes: Routes = [
         ]
     },
     { path: 'shopping-list', component: ShoppingListComponent },
+    { path: 'signup', component: SignupComponent },
+    { path: 'signin', component: SigninComponent },
     { path: 'not-found', component: ErrorPageComponent, data: { message: 'Page not found!' } },
     { path: '**', redirectTo: '/not-found' },
 ];
