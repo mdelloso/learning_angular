@@ -11,7 +11,7 @@ export class ServerService {
   }
 
   getServers() {
-    return this.http.get('https://udemy-http-test-9ff2e.firebaseio.com/data').pipe(
+    return this.http.get('https://udemy-http-test-9ff2e.firebaseio.com/data.json').pipe(
       map( // El operador map, toma el dato y lo wrapea en un nuevo observable. En este caso, data será wrapeado en un observable.
         (response: Response) => {
           const data = response.json(); // el método json parsea el json a un objecto JavaScript.
