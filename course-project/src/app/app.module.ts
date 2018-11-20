@@ -27,7 +27,7 @@ import {AuthGuard} from './auth/auth-guard-service';
 
 
 @NgModule({
-  declarations: [
+  declarations: [ // Se definen los componentes, directivas, pipes, etc.
     DropdownDirective,
     AppComponent,
     HeaderComponent,
@@ -43,7 +43,7 @@ import {AuthGuard} from './auth/auth-guard-service';
     SignupComponent,
     SigninComponent
   ],
-  imports: [
+  imports: [  // Módulos de Angular.
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
