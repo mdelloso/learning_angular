@@ -1,0 +1,6 @@
+Clase 70 - Acceder al DOM con @ViewChild.7
+Clase 75 - Acceder al ng-content con @ContentChild
+Clase 89 - Cambiar estilo al poner el mouse arriba.
+Clase 90 - Directiva para cambiar el estilo facilmente sin usar renderer.
+Clase 91 - Super quilombo de bindeo de propiedades.
+Clase 94 - ngSwitch.
