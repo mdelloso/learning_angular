@@ -6,3 +6,5 @@ npm install --save firebase (instala el paquete con las librerías de Firebase, 
 Para utilizar firebase hay que importarla en el app.component y copiar la apiKey y authDomain en el método initializeApp
 
 npm install --save-dev @angular/cli@latest (actualizar)
+
+ng build --prod --aot (--prod: trata de optmizar y minimizar el código, --aot: Ahead of time compilation)

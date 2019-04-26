@@ -8,7 +8,7 @@ import {RecipeDetailComponent} from './recipe-detail/recipe-detail.component';
 
 const recipesRoutes: Routes = [
   {
-    path: 'recipes', component: RecipesComponent, children: [
+    path: '', component: RecipesComponent, children: [
       { path: '', component: RecipeStartComponent },
       // Los parámetros estáticos deben estar antes que los dinámicos sino angular va a intentar parcear
       // el new como un id dinámico.

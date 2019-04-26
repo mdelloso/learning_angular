@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import {DataStorageService} from '../shared/data-storage.service';
-import { Response} from '@angular/http';
-import {AuthService} from '../auth/auth.service';
+import {Component} from '@angular/core';
+import {DataStorageService} from '../../shared/data-storage.service';
+import {AuthService} from '../../auth/auth.service';
+import {HttpEvent} from '@angular/common/http';
+import {Recipe} from '../../recipes/recipe.model';
 
 @Component({
   selector: 'app-header',
@@ -11,14 +12,15 @@ import {AuthService} from '../auth/auth.service';
 export class HeaderComponent {
 
 
-  constructor(private dataStorageService: DataStorageService, private authService: AuthService) { }
+  constructor(private dataStorageService: DataStorageService, private authService: AuthService) {
+  }
 
 
- onSaveData() {
+  onSaveData() {
     /* Ahora sí, al suscribirse al observable el request se va a enviar *!/
     /* No es necesario desuscribirse de este observable ya que angular lo va a limpiar cuando llegue la respuesta */
     this.dataStorageService.storeRecipes().subscribe(
-      (response: Response) => {
+      (response: HttpEvent<Object>) => {
         console.log(response);
       }
     );
@@ -26,7 +28,7 @@ export class HeaderComponent {
 
   onFetchData() {
     this.dataStorageService.getRecipes().subscribe(
-      (response: Response) => {
+      (response: Recipe[]) => {
         console.log(response);
       }
     );

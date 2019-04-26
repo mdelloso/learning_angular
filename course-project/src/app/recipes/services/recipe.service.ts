@@ -11,7 +11,7 @@ export class RecipeService {
 
   private recipes: Recipe[] = [
     new Recipe('Schnitzel', 'This is simple test',
-      'http://szzljy.com/images/circle/circle6.jpg',
+      'https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/uh59Wh0/fast-food-cartoon-illustration-hand-drawn-animation-transparent_v1pm904__S0004.jpg',
       [
         new Ingredient('Meat', 1),
         new Ingredient('French Fries', 20)
@@ -19,7 +19,7 @@ export class RecipeService {
     ),
     new Recipe('Cheese Burger', 'This is another simple test',
       // tslint:disable-next-line:max-line-length
-      'http://szzljy.com/images/circle/circle6.jpg',
+      'https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/uh59Wh0/fast-food-cartoon-illustration-hand-drawn-animation-transparent_v1pm904__S0004.jpg',
       [
         new Ingredient('Buns', 2),
         new Ingredient('Meat', 1),
